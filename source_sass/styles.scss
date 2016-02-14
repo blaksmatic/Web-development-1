@@ -1,6 +1,256 @@
+/*referance https://api.jquery.com/click/ */
+/*https://en.wikipedia.org/wiki/Your_Lie_in_April*/
 @import "compass";
 @import "compass/reset";
-
 @import "variables";
 @import "mixins";
 @import "base";
+
+@charset "UTF-8";
+
+@mixin transition($time) {
+  transition: all $time+s;
+  -moz-transition: all $time+s;
+  -webkit-transition: all $time+s;
+  -o-transition: all $time+s;
+}
+
+@mixin navIconOpacity() {
+  position: absolute;
+  top: 300px;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+@mixin boxshadow() {
+  box-shadow: 0px 0px 5px;
+}
+
+@mixin positionIndicator() {
+  @include transition(0.4);
+  .isHere {
+    height: 20px;
+    background-color: #2b81af;
+    padding: 15px;
+  }
+}
+
+head {
+  margin-bottom: auto;
+}
+
+body {
+  background-image: url("../media/music2.jpg");
+}
+
+.trailer {
+  display: block;
+  @include boxshadow();
+  margin: 10px auto;
+}
+
+nav.navbar {
+  @include transition(0.5);
+  font-family: "Bebas Neue", sans-serif !important;
+  font-weight: 400;
+  font-size: 30px;
+  position: fixed;
+  background-color: palevioletred;
+  padding: 15px;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 55px;
+  z-index: 100;
+
+  &.small {
+    padding: 15px;
+    background-color: lightpink;
+    font-weight: 400;
+    font-size: 25px;
+    height: 25px;;
+  }
+
+  a {
+    &:link {
+      text-decoration: none;
+      color: darkslateblue;
+    }
+    &:visited {
+      color: darkslateblue;
+      text-decoration: none;
+    }
+    &:hover {
+      color: darkslategray;
+    }
+  }
+
+}
+
+#Trail {
+  @include positionIndicator();
+}
+
+#stor {
+  @include positionIndicator();
+}
+
+#charac {
+  @include positionIndicator();
+}
+
+#chrou {
+  @include positionIndicator();
+}
+
+.isHere {
+  height: 20px;
+  background-color: #2b81af;
+  padding: 15px;
+}
+
+img.title {
+  display: block;
+  @include boxshadow();
+  margin: 35px auto;
+}
+
+.sidebar {
+  height: 100px;
+  width: 30px;
+  position: fixed;
+  top: 50%;
+  animation-name: backgroundColor;
+  animation-duration: 4s;
+  -webkit-animation-iteration-count: 300; /* Chrome, Safari, Opera */
+  animation-iteration-count: 300;
+  @include transition(0.4);
+  &:hover {
+    height: 200px;
+    width: 60px;
+    i {
+
+    }
+  }
+}
+
+@keyframes backgroundColor {
+  0% {
+    background-color: palevioletred;
+  }
+  25% {
+    background-color: lightpink;
+  }
+  50% {
+    background-color: deeppink;
+  }
+  75% {
+    background-color: hotpink;
+  }
+  100% {
+    background-color: gray;
+  }
+}
+
+#story {
+  font-size: 25px;
+  width: 1280px;
+  margin: 15px auto;
+  text-indent: 50px;
+}
+
+#carousel {
+  margin: 25px auto;
+  width: 1280px;
+  box-shadow: 0 0 22px;
+  overflow: hidden;
+
+  ul {
+    list-style: none;
+    position: relative;
+    width: 5120px;
+    left: -1280px;
+  }
+
+  ul li {
+    width: 1280px;
+    height: 720px;
+    text-align: left;
+    list-style: none;
+    float: left;
+  }
+}
+
+.navIcon {
+  position: absolute;
+}
+
+#navIconRight {
+  left: 1180px;
+  @include navIconOpacity;
+}
+
+#navIconLeft {
+  left: auto;
+  @include navIconOpacity;
+}
+
+.charPicture {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 150px;
+  :hover {
+    @include transition(0.8);
+    opacity: 0.8;
+  }
+  > a {
+    position: relative;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.modalDialogs {
+  position: fixed;
+  font-family: Helvetica;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 200;
+  pointer-events: none;
+  background-color: lightgray;
+  @include transition(0.4);
+
+  &:target {
+    opacity: 0.8;
+    pointer-events: auto;
+  }
+  & > div {
+    background-image: url("../media/background2.jpg");
+    position: relative;
+    width: 400px;
+    margin: 300px auto;
+    padding: 30px 30px 30px 30px;
+  }
+}
+
+.closeButton {
+  background-color: lightpink;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  line-height: 35px;
+  text-align: center;
+  width: 24px;
+  font-weight: 400;
+  @include boxshadow();
+
+  &:hover {
+    background: deeppink;
+  }
+}
