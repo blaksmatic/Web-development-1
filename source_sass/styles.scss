@@ -40,7 +40,12 @@ head {
   margin-bottom: auto;
 }
 
+header {
+  font-size: 50px;
+}
+
 body {
+  background-attachment: fixed;
   background-image: url("../media/music2.jpg");
 }
 
@@ -123,7 +128,6 @@ img.title {
   top: 50%;
   animation-name: backgroundColor;
   animation-duration: 4s;
-  -webkit-animation-iteration-count: 300; /* Chrome, Safari, Opera */
   animation-iteration-count: 300;
   @include transition(0.4);
   &:hover {
@@ -256,4 +260,11 @@ img.title {
     background: deeppink;
     opacity: 0.6;
   }
+}
+
+.foot {
+  background-color: deepskyblue;
+  font-family: Helvetica;
+  font-size: 20px;
+  padding-left: 50px;
 }

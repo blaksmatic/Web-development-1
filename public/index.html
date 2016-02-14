@@ -2,10 +2,11 @@
 <!-- Picture from http://i.imgur.com/W0iP8fD.jpg -->
 <html lang="en">
 <head class="head">
-        <meta charset="UTF-8">
-        <title>Your Lie In April</title>
+    <meta charset="UTF-8">
+    <title>Your Lie In April</title>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+          type="text/css">
     <script src="lib/jquery-2.1.3.min/index.js"></script>
     <script src="js/script.js"></script>
     <script src="http://localhost:35729/livereload.js"></script>
@@ -16,26 +17,29 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 </head>
 <body>
-<nav class="navbar">
-    <div class=container>
-        <a href=#Trailer id="Trail">Trailer</a> &nbsp; /&nbsp;
-        <a href="#story" id="stor">Story</a> &nbsp; /&nbsp;
-        <a href="#carousel" id="chrou">Gallery</a> &nbsp; /&nbsp;
-        <a href="#Characters" id="charac">Characters</a>
-    </div>
-</nav>
+<header>
+    <img class=title src="./media/picture1.jpg">
 
+
+    <nav class="navbar">
+        <div class=container>
+            <a href=#Trailer id="Trail">Trailer</a> &nbsp; /&nbsp;
+            <a href="#story" id="stor">Story</a> &nbsp; /&nbsp;
+            <a href="#carousel" id="chrou">Gallery</a> &nbsp; /&nbsp;
+            <a href="#Characters" id="charac">Characters</a>
+        </div>
+    </nav>
+</header>
 <div class="sidebar">
     <i class="fa fa-facebook fa-2x"></i>
     <i class="fa fa-flickr fa-2x"></i>
 </div>
 
 <article class="introduction">
-    <img class=title src="./media/picture1.jpg">
     <video id=Trailer class=trailer width="1280" height="720" controls autoplay>
         <source src="./media/Your%20lie%20in%20April%20Trailer.mp4">
     </video>
-    <h4 id="story" class = story>
+    <h4 id="story" class=story>
         <P> Piano prodigy Kousei Arima dominated the competition and has become famous among child musicians.</P>
         <P> After his mother, who was also his instructor, died, he had a mental breakdown while performing at a piano
             recital at the age of eleven.</P>
@@ -66,8 +70,8 @@
         <li><img src=./media/picture2.jpg></li>
     </ul>
     <div class=navIcon>
-        <img id=navIconRight src="./media/NavIcon2.png">
-        <img id=navIconLeft src="./media/NavIcon.png">
+        <i id=navIconRight class="fa fa-caret-square-o-right fa-4x"></i>
+        <i id=navIconLeft class="fa fa-caret-square-o-left fa-4x"></i>
     </div>
 </section>
 
@@ -114,5 +118,9 @@
     </div>
 </section>
 
+<footer class=foot>
+    <p>Made by Yixiang Zeng</p>
+    <p> U of I Feb 2016</p>
+</footer>
 </body>
 </html>
