@@ -153,11 +153,14 @@ img.title {
   }
 }
 
-#story {
+.story {
   font-size: 25px;
   width: 1280px;
+  border-top: 50px;
+  border-bottom: 50px;
   margin: 15px auto;
   text-indent: 50px;
+
 }
 
 #carousel {
@@ -200,7 +203,7 @@ img.title {
   text-align: center;
   margin: 0 auto;
   margin-top: 100px;
-  margin-bottom: 150px;
+  margin-bottom: 250px;
   :hover {
     @include transition(0.8);
     opacity: 0.8;
@@ -213,13 +216,13 @@ img.title {
   }
 }
 
-.modalDialogs {
+.modalWindows {
   position: fixed;
-  font-family: Helvetica;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  font-family: sans, Helvetica;
+  top: 50px;
+  button: 40px;
+  left: 30px;
+  right: 40px;
   opacity: 0;
   z-index: 200;
   pointer-events: none;
@@ -247,10 +250,10 @@ img.title {
   line-height: 35px;
   text-align: center;
   width: 24px;
-  font-weight: 400;
   @include boxshadow();
 
   &:hover {
     background: deeppink;
+    opacity: 0.6;
   }
 }

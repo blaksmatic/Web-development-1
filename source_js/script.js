@@ -24,7 +24,8 @@ var $document = $(document)
 /*This function is resizing the navbar*/
 $document.ready(function () {
     $window.scroll(function () {
-        if ($document.scrollTop() > 30) {
+        var CurrentPosition = $document.scrollTop();
+        if (CurrentPosition > 30) {
             $('nav.navbar').addClass('small');
         } else {
             $('nav.navbar').removeClass('small');
@@ -37,7 +38,7 @@ $document.ready(function () {
     $('a[href*=#]').on('click', function (event) {
         if (this.id == "Trail" || this.id == "stor" || this.id == "charac" || this.id == "chrou")
             event.preventDefault();
-        $('body').animate({scrollTop: $(this.hash).offset().top - 100}, 'slow');
+        $('body').animate({scrollTop: $(this.hash).offset().top -100}, 'slow');
     });
 });
 
@@ -67,7 +68,7 @@ $document.ready(function () {
     var trailerDistance = $("#Trailer").offset().top;
     var storyDistance = $("#story").offset().top;
     var characterDistance = $("#Characters").offset().top;
-    var crouselDistance = $("#carousel").offset().top+100;
+    var crouselDistance = $("#carousel").offset().top;
 
     $window.scroll(function () {
         var CurrentPosition = $document.scrollTop();
