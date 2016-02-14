@@ -64,7 +64,7 @@ $document.ready(function () {
 
 /*This function is position indicator*/
 $document.ready(function () {
-    var scrollDistance = $(window).scrollTop();
+    var scrollDistance = $(window).scrollTop() +50;
     var trailerDistance = $("#Trailer").offset().top;
     var storyDistance = $("#story").offset().top;
     var characterDistance = $("#Characters").offset().top;
