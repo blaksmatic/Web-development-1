@@ -1,20 +1,117 @@
 <!doctype html>
+<!-- Picture from http://i.imgur.com/W0iP8fD.jpg -->
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>MP1 Starter</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-</head>
 <body>
-  <h1>Hello World!</h1>
-  <div class="test"> My name is Anthony.</div>
-  <div class="cat">
-    <img src="./media/cat.jpg" alt="Cat">
-  </div>
+<header>
+    <div class="head">
+        <meta charset="UTF-8">
+        <title>Your Lie In April</title>
+    </div>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="lib/jquery-2.1.3.min/index.js"></script>
+    <script src="js/script.js"></script>
+    <script src="http://localhost:35729/livereload.js"></script>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</header>
 
-  <script src="lib/jquery-2.1.3.min/index.js"></script>
-  <script src="js/script.js"></script>
-  <script src="http://localhost:35729/livereload.js"></script>
+<nav class="navbar">
+    <div class=container>
+        <a href=#Trailer id="Trail">Trailer</a> &nbsp; /&nbsp;
+        <a href="#story" id="stor">Story</a> &nbsp; /&nbsp;
+        <a href="#carousel" id="chrou">Gallery</a> &nbsp; /&nbsp;
+        <a href="#Characters" id="charac">Characters</a>
+    </div>
+</nav>
+
+<div class = "sidebar">
+    <i class="fa fa-facebook fa-2x"></i>
+    <i class="fa fa-flickr fa-2x"></i>
+</div>
+
+<article class="introduction">
+    <img class=title src="./media/picture1.jpg">
+    <video id=Trailer class=trailer width="1280" height="720" controls autoplay>
+        <source src="./media/Your%20lie%20in%20April%20Trailer.mp4">
+    </video>
+    <h4 id="story">
+        <P>Piano prodigy Kousei Arima dominated the competition and has become famous among child musicians.</P>
+        <P>After his mother, who was also his instructor, died, he had a mental breakdown while performing at a piano
+            recital at the age of eleven.</P>
+        <p>
+            As a result, he is no longer able to hear the sound of his piano even though his hearing is perfectly
+            fine.
+            Two years later, Kousei hasn't touched the piano and views the world in monochrome, without any flair or
+            color.
+        </p>
+        He has resigned himself to living out his life with his good friends, Tsubaki and Watari, until, one day, a
+        girl changes everything.
+        <p>
+            Kaori Miyazono, a fourteen-year old audacious, free-spirited violinist whose playing style reflects her
+            manic personality,
+            helps Kousei return to the music world and shows that it should be free and mold breaking unlike the
+            structured
+            and rigid style Kousei was used to.
+        </p>
+    </h4>
+</article>
+
+<section id=carousel>
+    <ul>
+        <li><img src=./media/picture2.jpg></li>
+        <li><img src=./media/picture3.png></li>
+        <li><img src=./media/picture4.jpg></li>
+        <li><img src=./media/picture2.jpg></li>
+    </ul>
+    <div class=navIcon>
+        <img id=navIconRight src="./media/NavIcon2.png">
+        <img id=navIconLeft src="./media/NavIcon.png">
+    </div>
+</section>
+
+<section class=charPicture id="Characters">
+    <a href="#charModal1"><img src="media/Character%201.jpg"> </a>
+    <a href="#charModal2"><img src="media/Character%202.png"> </a>
+</section>
+
+<section id=modals>
+    <div id="charModal1" class="modalDialogs">
+        <div><a href="#close" title="Close" class="closeButton">X</a>
+
+            <h1>Kōsei Arima</h1>
+            <p>Kōsei is a former child prodigy in playing piano, dubbed the "Human Metronome" for his near-inhuman
+                mechanical accuracy, a product of his mother's overly strict methods of teaching.
+            <p>His ability to play the piano with unparalleled precision led him to win many competitions across Japan.
+                When
+                his mother died, the resulting psychological trauma caused him to be unable to hear the sound of the
+                piano,
+                and he gave up playing.
+            <p>Now, two years later, he takes up the piano again after being convinced by Kaori Miyazono, influenced by
+                her
+                emotional and unrestrained playing style. </p>
+            <p>Kōsei eventually found himself falling in love with Kaori but held back due to the fact that she was
+                Watari's
+                love interest.</p>
+            <p>---from Wikipedia</p>
+        </div>
+    </div>
+
+    <div id="charModal2" class="modalDialogs">
+        <div><a href="#close" title="Close" class="closeButton">X</a>
+            <h1>Miyazono Kawori</h1>
+            <p>
+                Kaori is Tsubaki's classmate, and is a free-spirited violinist who has drawn much criticism from judging
+                panels due to her unwillingness to adhere strictly to the score, but is highly favored by audiences that
+                hear her playing.</p>
+            <p> Kaori first met Kōsei when she asked Tsubaki to set her up with Watari, and eventually convinced Kōsei
+                to play the piano again, first as her accompanist and later in a piano competition.
+
+            </p>
+            <p>from Wikipedia</p>
+        </div>
+    </div>
+</section>
+
 </body>
 </html>
