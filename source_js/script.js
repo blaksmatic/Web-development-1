@@ -64,14 +64,14 @@ $document.ready(function () {
 
 /*This function is position indicator*/
 $document.ready(function () {
-    var scrollDistance = $(window).scrollTop() +50;
     var trailerDistance = $("#Trailer").offset().top;
     var storyDistance = $("#story").offset().top;
-    var characterDistance = $("#Characters").offset().top;
+    var characterDistance = $(".charPicture").offset().top;
     var crouselDistance = $("#carousel").offset().top;
 
     $window.scroll(function () {
-        var CurrentPosition = $document.scrollTop();
+        var CurrentPosition = $document.scrollTop() + 50;
+       // alert(CurrentPosition+" "+characterDistance);
         if (CurrentPosition > trailerDistance && CurrentPosition <= storyDistance)
             $("#Trail").addClass("isHere");
         else
@@ -84,7 +84,7 @@ $document.ready(function () {
             $("#chrou").addClass("isHere");
         else
             $("#chrou").removeClass("isHere");
-        if (CurrentPosition > characterDistance)
+        if (CurrentPosition >= 1850)
             $("#charac").addClass("isHere");
         else
             $("#charac").removeClass("isHere");

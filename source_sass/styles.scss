@@ -36,6 +36,11 @@
   }
 }
 
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 head {
   margin-bottom: auto;
 }
@@ -206,8 +211,7 @@ img.title {
 .charPicture {
   text-align: center;
   margin: 0 auto;
-  margin-top: 100px;
-  margin-bottom: 250px;
+  margin-bottom: 200px;
   :hover {
     @include transition(0.8);
     opacity: 0.8;
