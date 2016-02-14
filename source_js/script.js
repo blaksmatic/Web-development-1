@@ -80,11 +80,11 @@ $document.ready(function () {
             $("#stor").addClass("isHere");
         else
             $("#stor").removeClass("isHere");
-        if (CurrentPosition > crouselDistance && CurrentPosition <= characterDistance)
+        if (CurrentPosition > crouselDistance && CurrentPosition <= 2050)
             $("#chrou").addClass("isHere");
         else
             $("#chrou").removeClass("isHere");
-        if (CurrentPosition >= 1850)
+        if (CurrentPosition >= 2050)
             $("#charac").addClass("isHere");
         else
             $("#charac").removeClass("isHere");
