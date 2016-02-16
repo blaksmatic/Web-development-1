@@ -159,7 +159,9 @@ nav.navbar {
   @include blur(5px);
   background-color: rgba(194, 105, 145, 0.9);
   & > #carousel {
-    margin: auto auto;
+    top: 50%;
+    margin-left: auto;
+    margin-right: auto;
     width: 1280px;
     box-shadow: 0 0 22px;
     overflow: hidden;
@@ -272,7 +274,7 @@ nav.navbar {
   border: none;
   & > div {
     display: inline;
-    margin-top: 50%;
+    top: 50%;
     margin: auto 15px;
   }
 }

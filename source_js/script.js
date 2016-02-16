@@ -64,13 +64,14 @@ $document.ready(function () {
 
 /*This function is position indicator*/
 $document.ready(function () {
-    var trailerDistance = $("#Trailer").offset().top;
-    var storyDistance = $("#story").offset().top;
+    var trailerDistance = $("#Trailer").offset().top + 700;
+    var storyDistance = $("#story").offset().top +900;
     var characterDistance = $(".charPicture").offset().top;
-    var crouselDistance = $("#carousel").offset().top;
+    var crouselDistance = $("#carousel").offset().top + 800;
 
     $window.scroll(function () {
         var CurrentPosition = $document.scrollTop()+130;
+        //alert(CurrentPosition+ " "+trailerDistance + " "+ storyDistance + " "+ crouselDistance);
        // alert(CurrentPosition+" "+characterDistance);
         if (CurrentPosition > trailerDistance && CurrentPosition <= storyDistance)
             $("#Trail").addClass("isHere");
