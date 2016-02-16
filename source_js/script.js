@@ -70,7 +70,7 @@ $document.ready(function () {
     var crouselDistance = $("#carousel").offset().top;
 
     $window.scroll(function () {
-        var CurrentPosition = $document.scrollTop() + 50;
+        var CurrentPosition = $document.scrollTop()+130;
        // alert(CurrentPosition+" "+characterDistance);
         if (CurrentPosition > trailerDistance && CurrentPosition <= storyDistance)
             $("#Trail").addClass("isHere");
@@ -80,11 +80,11 @@ $document.ready(function () {
             $("#stor").addClass("isHere");
         else
             $("#stor").removeClass("isHere");
-        if (CurrentPosition > crouselDistance && CurrentPosition <= 2050)
+        if (CurrentPosition > crouselDistance && CurrentPosition <= 2350)
             $("#chrou").addClass("isHere");
         else
             $("#chrou").removeClass("isHere");
-        if (CurrentPosition >= 2050)
+        if (CurrentPosition >= 2350)
             $("#charac").addClass("isHere");
         else
             $("#charac").removeClass("isHere");

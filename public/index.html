@@ -17,8 +17,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 </head>
 <body>
-<header>
-    <img class=title src="./media/picture1.jpg">
+<header class=pictureHeader>
+    <img class=title src="./media/April.jpg">
 </header>
 <nav class="navbar">
     <div class=container>
@@ -28,13 +28,9 @@
         <a href="#Characters" id="charac">Characters</a>
     </div>
 </nav>
-<div class="sidebar">
-    <i class="fa fa-facebook fa-2x"></i>
-    <i class="fa fa-flickr fa-2x"></i>
-</div>
 
 <article class="introduction">
-    <video id=Trailer class=trailer width="1280" height="720" controls autoplay>
+    <video id=Trailer class=trailer width="1280" height="720" autoplay>
         <source src="./media/Your%20lie%20in%20April%20Trailer.mp4">
     </video>
     <h4 id="story" class=story>
@@ -59,20 +55,20 @@
         <p>---from Wikipedia: Your Lie in April</p>
     </h4>
 </article>
-
-<section id=carousel>
-    <ul>
-        <li><img src=./media/picture2.jpg></li>
-        <li><img src=./media/picture3.png></li>
-        <li><img src=./media/picture4.jpg></li>
-        <li><img src=./media/picture2.jpg></li>
-    </ul>
-    <div class=navIcon>
-        <i id=navIconRight class="fa fa-caret-square-o-right fa-4x"></i>
-        <i id=navIconLeft class="fa fa-caret-square-o-left fa-4x"></i>
+<section class=carouselpictures>
+    <div id=carousel>
+        <ul>
+            <li><img src=./media/picture2.jpg></li>
+            <li><img src=./media/picture3.png></li>
+            <li><img src=./media/picture4.jpg></li>
+            <li><img src=./media/picture2.jpg></li>
+        </ul>
+        <div class=navIcon>
+            <i id=navIconRight class="fa fa-caret-square-o-right fa-4x"></i>
+            <i id=navIconLeft class="fa fa-caret-square-o-left fa-4x"></i>
+        </div>
     </div>
 </section>
-
 <div class=charPicture id="Characters">
     <a href="#charModal1"><img src="media/Character%201.jpg"> </a>
     <a href="#charModal2"><img src="media/Character%202.png"> </a>
@@ -80,7 +76,7 @@
 
 <section id=modals>
     <div id="charModal1" class="modalWindows">
-        <div><a href="#close" class="closeButton">X</a>
+        <div><a href="#close" class="closeButton"><i class="fa fa-times"></i></a>
 
             <h1>Kōsei Arima</h1>
             <p>Kōsei is a former child prodigy in playing piano, dubbed the "Human Metronome" for his near-inhuman
@@ -101,7 +97,7 @@
     </div>
 
     <div id="charModal2" class="modalWindows">
-        <div><a href="#close" class="closeButton">X</a>
+        <div><a href="#close" class="closeButton"><i class="fa fa-times"></i></a>
             <h1>Miyazono Kawori</h1>
             <p>
                 Kaori is Tsubaki's classmate, and is a free-spirited violinist who has drawn much criticism from judging
@@ -117,8 +113,19 @@
 </section>
 
 <footer class=foot>
-    <p>Made by Yixiang Zeng</p>
-    <p> U of I Feb 2016</p>
+    <div>
+        <p>Made by Yixiang Zeng</p>
+        <p> U of I Feb 2016</p>
+    </div>
+    <div>
+        <i class="fa fa-facebook fa-2x"></i>
+    </div>
+    <div>
+        <i class="fa fa-flickr fa-2x"></i>
+    </div>
+    <div>
+        <i class="fa fa-reddit-alien fa-2x"></i>
+    </div>
 </footer>
 </body>
 </html>

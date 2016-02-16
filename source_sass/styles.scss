@@ -36,50 +36,65 @@
   }
 }
 
+@mixin blur($degree) {
+  -webkit-filter: blur($degree+px);
+  filter: blur($degree+px);
+}
+
 html, body {
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 head {
   margin-bottom: auto;
 }
 
-header {
-  font-size: 50px;
+.pictureHeader {
+  object-fit: cover;
+  & > img {
+    @include blur(2);
+    width: 100%;
+    opacity: 0.8;
+  }
 }
 
 body {
   background-attachment: fixed;
-  background-image: url("../media/music2.jpg");
+  background-image: url("../media/picture1.jpg");
+  background-size: 100%;
 }
 
 .trailer {
   display: block;
   @include boxshadow();
-  margin: 10px auto;
+  margin: auto auto;
 }
 
 nav.navbar {
-  @include transition(0.5);
-  font-family: "Bebas Neue", sans-serif !important;
+  @include transition(0.4);
+  font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 40px;
   position: fixed;
-  background-color: palevioletred;
+  background: #D07EAC;
   padding: 15px;
   top: 0;
   right: 0;
   left: 0;
-  height: 55px;
   z-index: 100;
+
+  .container {
+    padding-top: 5px;
+  }
 
   &.small {
     padding: 15px;
-    background-color: lightpink;
+    background-color: #F4AFD6;
+    opacity: 0.8;
     font-weight: 400;
     font-size: 25px;
-    height: 25px;;
+    height: 25px;
+
+    @include blur(1);
   }
 
   a {
@@ -120,77 +135,49 @@ nav.navbar {
   padding: 15px;
 }
 
-img.title {
-  display: block;
-  @include boxshadow();
-  margin: 35px auto;
-}
-
-.sidebar {
-  height: 100px;
-  width: 30px;
-  position: fixed;
-  top: 50%;
-  animation-name: backgroundColor;
-  animation-duration: 4s;
-  animation-iteration-count: 300;
-  @include transition(0.4);
-  &:hover {
-    height: 200px;
-    width: 60px;
-    i {
-
-    }
-  }
-}
-
-@keyframes backgroundColor {
-  0% {
-    background-color: palevioletred;
-  }
-  25% {
-    background-color: lightpink;
-  }
-  50% {
-    background-color: deeppink;
-  }
-  75% {
-    background-color: hotpink;
-  }
-  100% {
-    background-color: gray;
-  }
-}
-
-.story {
+.introduction {
   font-size: 25px;
-  width: 1280px;
-  border-top: 50px;
-  border-bottom: 50px;
-  margin: 15px auto;
+  padding-bottom: 50px;
   text-indent: 50px;
-
+  background-color: rgba(230, 139, 125, 0.9);
+  @include blur(2px);
+  & > .story {
+    padding-top: 50px;
+    width: 1280px;
+    margin: auto;
+  }
+  & > video {
+    width: 100%;
+    height: auto;
+  }
 }
 
-#carousel {
-  margin: 25px auto;
-  width: 1280px;
-  box-shadow: 0 0 22px;
-  overflow: hidden;
+.carouselpictures {
 
-  ul {
-    list-style: none;
-    position: relative;
-    width: 5120px;
-    left: -1280px;
-  }
-
-  ul li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include blur(5px);
+  background-color: rgba(194, 105, 145, 0.9);
+  & > #carousel {
+    margin: auto auto;
     width: 1280px;
-    height: 720px;
-    text-align: left;
-    list-style: none;
-    float: left;
+    box-shadow: 0 0 22px;
+    overflow: hidden;
+
+    ul {
+      list-style: none;
+      position: relative;
+      width: 5120px;
+      left: -1280px;
+    }
+
+    ul li {
+      width: 1280px;
+      height: 720px;
+      text-align: left;
+      list-style: none;
+      float: left;
+    }
   }
 }
 
@@ -209,11 +196,13 @@ img.title {
 }
 
 .charPicture {
+  background-color: rgba(230, 139, 125, 0.9);;
   text-align: center;
+  padding-top: 40px;
   margin: 0 auto;
-  margin-bottom: 200px;
+  padding-bottom: 200px;
   :hover {
-    @include transition(0.8);
+    @include transition(0.5);
     opacity: 0.8;
   }
   > a {
@@ -235,6 +224,9 @@ img.title {
   z-index: 200;
   pointer-events: none;
   background-color: lightgray;
+  animation-name: backgroundColor;
+  animation-duration: 4s;
+  animation-iteration-count: 300;
   @include transition(0.4);
 
   &:target {
@@ -262,13 +254,41 @@ img.title {
 
   &:hover {
     background: deeppink;
-    opacity: 0.6;
+    opacity: 0.7;
   }
 }
 
 .foot {
-  background-color: deepskyblue;
-  font-family: Helvetica;
-  font-size: 20px;
-  padding-left: 50px;
+  animation-name: backgroundColor;
+  animation-duration: 4s;
+  animation-iteration-count: 300;
+  @include transition(0.4);
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;;
+  font-size: 25px;
+  padding: 15px;
+  float: left;
+  width: 100%;
+  border: none;
+  & > div {
+    display: inline;
+    margin-top: 50%;
+    margin: auto 15px;
+  }
 }
+
+@keyframes backgroundColor {
+  0% {
+    background-color: #F4AFD6;
+  }
+  25% {
+    background-color: #ff8d92;
+  }
+  50% {
+    background-color: #ff8486;
+  }
+  100% {
+    background-color: #F4AFD6;
+  }
+}
+
